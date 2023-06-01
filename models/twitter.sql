@@ -15,6 +15,7 @@ select cast(campaign_id as string) as campaign_id,
         video_total_views as video_views
         from {{ref('src_promoted_tweets_twitter_all_data')}}
 )
+
 ALTER table twittercte add column `ad_id` string;
 ALTER TABLE twittercte ALTER COLUMN `ad_id` SET DEFAULT " ";
 UPDATE twittercte SET ad_id = " " WHERE TRUE;
@@ -23,9 +24,6 @@ ALTER table twittercte add column `adset_id` string;
 ALTER TABLE twittercte ALTER COLUMN `adset_id` SET DEFAULT " ";
 UPDATE twittercte SET adset_id = " " WHERE TRUE;
 
-ALTER table twittercte add column `campaign_id` string;
-ALTER TABLE twittercte ALTER COLUMN `campaign_id` SET DEFAULT " ";
-UPDATE twittercte SET campaign_id = " " WHERE TRUE;
 
 ALTER table twittercte add column `creative_id` string;
 ALTER TABLE twittercte ALTER COLUMN `creative_id` SET DEFAULT " ";

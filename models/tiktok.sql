@@ -13,7 +13,7 @@ select cast(ad_id as string) as ad_id,
         purchase,
         registrations,
         spend,
-        conversions as total_conversions,
+        conversions+skan_conversion as total_conversions,
         video_views
         from {{ref('src_ads_tiktok_ads_all_data')}}
 )

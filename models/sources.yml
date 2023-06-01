@@ -1,0 +1,18 @@
+version: 2
+
+sources:
+  - name: source_data
+    schema: source_data
+    tables:
+      - name: bing
+        identifier: src_ads_bing_all_data
+      - name: facebook
+        identifier: src_ads_creative_facebook_all_data
+      - name: tiktok
+        identifier: src_ads_tiktok_ads_all_data
+
+      - name: twitter
+        identifier: src_promoted_tweets_twitter_all_data
+
+      # For adding new resources
+      # - name: custom  

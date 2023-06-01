@@ -34,9 +34,6 @@ ALTER table bingcte add column `engagements` int;
 ALTER TABLE bingcte ALTER COLUMN `engagements` SET DEFAULT 0;
 UPDATE bingcte SET engagements = 0 WHERE TRUE;
 
-ALTER table bingcte add column `impressions` int;
-ALTER TABLE bingcte ALTER COLUMN `impressions` SET DEFAULT 0;
-UPDATE bingcte SET impressions = 0 WHERE TRUE;
 
 ALTER table bingcte add column `installs` int;
 ALTER TABLE bingcte ALTER COLUMN `installs` SET DEFAULT 0;
